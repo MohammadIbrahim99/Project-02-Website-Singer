@@ -99,3 +99,26 @@ emailInput.addEventListener("input", function () {
     emailInput.classList.remove("filled"); // Hapus kelas jika input kosong lagi
   }
 });
+
+// untuk tombol fungsi scroll ke atas
+
+// Ambil tombol ke atas
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Fungsi untuk menampilkan tombol ketika di halaman paling bawah atau saat pengguna scroll ke bawah
+window.onscroll = function () {
+  if (window.scrollY > 100) {
+    // Jika pengguna scroll lebih dari 100px dari atas
+    scrollToTopBtn.style.display = "block"; // Tampilkan tombol
+  } else {
+    scrollToTopBtn.style.display = "none"; // Sembunyikan tombol ketika dekat dengan bagian atas
+  }
+};
+
+// Fungsi untuk scroll ke atas ketika tombol diklik
+scrollToTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
