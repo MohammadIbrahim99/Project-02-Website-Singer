@@ -122,3 +122,32 @@ scrollToTopBtn.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+//Hamburger menu
+
+const cls = document.querySelector(".close"); // Tombol untuk close
+const nav = document.querySelector(".navbar-nav"); // Elemen navbar yang ingin di-close
+const navbar = document.querySelector(".navbar"); // Elemen navbar yang memiliki class 'active'
+const menu = document.querySelector(".menu"); // Tombol untuk membuka/menutup navbar
+//ketika hamburger menu diklik
+document.querySelector(".menu").onclick = (e) => {
+  navbar.classList.toggle("active");
+  menu.style.display = "none";
+  cls.style.display = "inline-block";
+  e.preventDefault();
+};
+
+//ketika diklik di luar navbar
+
+document.addEventListener("click", function (e) {
+  // Jika klik tidak terjadi di dalam navbar, menu, atau tombol close
+  if (!navbar.contains(e.target) && !menu.contains(e.target)) {
+    navbar.classList.remove("active");
+  }
+});
+
+cls.onclick = (e) => {
+  navbar.classList.remove("active");
+  menu.style.display = "inline-block";
+  e.preventDefault();
+};

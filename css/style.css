@@ -7,12 +7,15 @@
 
 /* HEADER NAV */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url("../image/background-img.jpg");
   background-size: cover; /* Atau bisa menggunakan background-size: contain; */
   background-position: center;
   background-repeat: no-repeat;
-  object-fit: cover;
   position: relative;
   width: 100%;
   background-attachment: fixed; /* Gambar tetap di tempat saat di-scroll */
@@ -52,7 +55,7 @@ body {
 
 .navbar {
   display: flex;
-  gap: rem;
+  gap: 2rem;
   width: 100%;
   padding-right: 0;
   justify-content: space-between;
@@ -64,6 +67,43 @@ body {
 .navbar-nav ul {
   display: flex;
   gap: 20px;
+}
+
+.menu {
+  height: 3rem;
+  width: auto;
+  fill: white;
+  position: absolute;
+  right: 0;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.lyric,
+.buy {
+  display: none;
+}
+
+.menu:hover {
+  fill: rgba(128, 128, 128, 1);
+}
+
+.close {
+  display: none;
+  height: 2rem;
+  width: auto;
+  fill: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+.close:hover {
+  fill: rgba(128, 128, 128, 1);
 }
 
 /* HERO */
@@ -181,7 +221,7 @@ body {
 }
 
 .song img {
-  height: 50%;
+  height: auto;
   width: 100%;
   padding-bottom: 2rem;
 }
@@ -196,79 +236,6 @@ body {
   font-size: 1.5rem;
   font-weight: 200;
 }
-/* .hero-right {
-  background-color: white;
-} */
-
-/* container modifikasi icon lagu */
-
-/* .audio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.controls {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-#play-pause-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-#progress-bar {
-  margin: 0 10px;
-  width: 300px;
-}
-
-#current-time,
-#duration {
-  font-size: 14px;
-}
-
-input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 8px;
-  background: #ddd;
-  border-radius: 5px;
-  outline: none;
-  transition: background 0.3s;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  background: #4caf50;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-input[type="range"]::-moz-range-thumb {
-  width: 15px;
-  height: 15px;
-  background: #4caf50;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#play-icon {
-  height: 2rem;
-  border: none;
-  border-radius: 50%;
-}
-
-#play-icon {
-  background-color: white;
-} */
 
 .container-page-2 {
   height: 100vh;
@@ -347,7 +314,7 @@ button.toggle-button {
 
 button.toggle-button img {
   width: 20px;
-  height: 20px;
+  height: 20 px;
 }
 
 /* Set the initial state for div2 */
@@ -421,10 +388,12 @@ form {
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 form p {
+  width: 80%;
+  margin: 0 auto;
   text-align: start;
-  padding-left: 6.5rem;
 }
 
 input[type="email"] {
@@ -460,11 +429,10 @@ input[type="checkbox"] {
 }
 
 .subscribe-option {
-  margin-left: 6.5rem;
   font-weight: 100;
+  width: 80%;
+  margin: 0 auto;
   text-align: start;
-  display: flex;
-  align-items: center;
 }
 
 .subscribe-option label {
@@ -528,8 +496,8 @@ input[type="checkbox"]:checked::before {
 
 #scrollToTopBtn svg {
   fill: white;
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 #scrollToTopBtn:hover {

@@ -11,10 +11,10 @@
       rel="stylesheet" />
   </head>
   <body>
-    <div class="container-page">
+    <div class="container-page" id="container-page">
       <header>
         <div class="navbar">
-          <div class="home"><a href="#">Home</a></div>
+          <div class="home"><a href="#container-page">Home</a></div>
           <div class="navbar-nav">
             <ul>
               <li>
@@ -45,7 +45,34 @@
             </ul>
           </div>
           <div class="login"><a href="#">Login</a></div>
+          <div class="lyric"><a href="#container-page-1">Lyric & Song</a></div>
+          <div class="buy"><a href="#tickets">Buy Ticets</a></div>
+
+          <svg
+            class="close"
+            clip-rule="evenodd"
+            fill-rule="evenodd"
+            stroke-linejoin="round"
+            stroke-miterlimit="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m12 10.93 5.719-5.72c.146-.146.339-.219.531-.219.404 0 .75.324.75.749 0 .193-.073.385-.219.532l-5.72 5.719 5.719 5.719c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.385-.073-.531-.219l-5.719-5.719-5.719 5.719c-.146.146-.339.219-.531.219-.401 0-.75-.323-.75-.75 0-.192.073-.384.22-.531l5.719-5.719-5.72-5.719c-.146-.147-.219-.339-.219-.532 0-.425.346-.749.75-.749.192 0 .385.073.531.219z" />
+          </svg>
         </div>
+
+        <svg
+          class="menu"
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          stroke-linejoin="round"
+          stroke-miterlimit="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m11 16.745c0-.414.336-.75.75-.75h9.5c.414 0 .75.336.75.75s-.336.75-.75.75h-9.5c-.414 0-.75-.336-.75-.75zm-9-5c0-.414.336-.75.75-.75h18.5c.414 0 .75.336.75.75s-.336.75-.75.75h-18.5c-.414 0-.75-.336-.75-.75zm4-5c0-.414.336-.75.75-.75h14.5c.414 0 .75.336.75.75s-.336.75-.75.75h-14.5c-.414 0-.75-.336-.75-.75z"
+            fill-rule="nonzero" />
+        </svg>
       </header>
 
       <div class="hero">
@@ -117,7 +144,10 @@
           <h1>"Someone Like You"</h1>
           <p>~Adele~</p>
           <div class="audio-container">
-            <audio controls src="song/Someone Like You -Adele.mp3"></audio>
+            <audio
+              controls
+              src="song/Someone Like You -Adele.mp3"
+              class="audio"></audio>
 
             <!-- <div class="controls">
               <button id="play-pause-btn">
@@ -137,7 +167,7 @@
       </div>
     </section>
 
-    <section class="container-page-2">
+    <section class="container-page-2" id="tickets">
       <div class="hero-page2">
         <h1>UPCOMING SHOWS</h1>
       </div>
@@ -220,7 +250,7 @@
     </section>
 
     <section class="container-page-3">
-      <div class="hero-join">
+      <div class="hero-join" id="join">
         <div class="judul"><h1>JOIN MY MAILING LIST</h1></div>
         <div class="judul-p">
           <p>For news and updates, please enter your email here:</p>
