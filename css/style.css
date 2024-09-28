@@ -19,7 +19,7 @@ body {
   position: relative;
   width: 100%;
   background-attachment: fixed; /* Gambar tetap di tempat saat di-scroll */
-  height: 100vh; /* Untuk menciptakan area scroll */
+  min-height: 100vh; /* Untuk menciptakan area scroll */
 }
 
 .home {
