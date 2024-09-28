@@ -290,3 +290,10 @@
 }
 @media (min-width: 1280px) {
 }
+
+@media (orientation: landscape) {
+  body {
+    height: 100vh; /* Untuk tampilan horizontal (landscape) */
+    min-height: 100vh; /* Atau gunakan min-height untuk lebih stabil */
+  }
+}
